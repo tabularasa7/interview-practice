@@ -8,7 +8,7 @@ func (q *Queue) Push(val int) {
 }
 
 func (q *Queue) Pop() int {
-	if q.isEmpty() {
+	if q.IsEmpty() {
 		return -1
 	}
 
@@ -18,6 +18,6 @@ func (q *Queue) Pop() int {
 
 }
 
-func (q *Queue) isEmpty() bool {
+func (q *Queue) IsEmpty() bool {
 	return len(*q) == 0
 }

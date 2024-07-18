@@ -67,3 +67,7 @@ func (list *LinkedList) PrintList() {
 		current = current.next
 	}
 }
+
+func (list *LinkedList) IsEmpty() bool {
+	return list.head == nil
+}
