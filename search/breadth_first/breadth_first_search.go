@@ -11,11 +11,6 @@ type vertex struct {
 type vertexQueue []vertex
 
 func CreateGraph() map[int][]int {
-	// vertex1 := vertex{data: 1}
-	// vertex2 := vertex{data: 2}
-	// vertex3 := vertex{data: 3}
-	// vertex4 := vertex{data: 4}
-	// vertex5 := vertex{data: 5}
 
 	adjacencyList := map[int][]int{
 		1: {3, 4},
