@@ -1,7 +1,5 @@
 package merge
 
-import "fmt"
-
 func Merge(left, right []int) []int {
 	sortedArray := []int{}
 	i, j := 0, 0
@@ -9,7 +7,6 @@ func Merge(left, right []int) []int {
 	for i < len(left) && j < len(right) {
 		leftVal := left[i]
 		rightVal := right[j]
-		fmt.Println(i, leftVal, j, rightVal)
 		if leftVal < rightVal {
 			sortedArray = append(sortedArray, leftVal)
 			i++
@@ -43,6 +40,5 @@ func MergeSort(dataArray []int) []int {
 	sortedLeft := MergeSort(left)
 	sortedRight := MergeSort(right)
 
-	// fmt.Println(sortedLeft, sortedRight)
 	return Merge(sortedLeft, sortedRight)
 }
