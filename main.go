@@ -8,8 +8,8 @@ import (
 	// "interview/practice/linkedlist"
 	// "interview/practice/queue"
 	// "interview/practice/search/binary"
-	// breadthfirst "interview/practice/search/breadth_first"
-	// depthfirst "interview/practice/search/depth_first"
+	breadthfirst "interview/practice/search/breadth_first"
+	depthfirst "interview/practice/search/depth_first"
 	// "interview/practice/stack"
 	// "log"
 )
@@ -86,7 +86,7 @@ func main() {
 	// 	log.Fatalln(err)
 	// }
 
-	// graph := breadthfirst.CreateGraph()
+	graph := breadthfirst.CreateGraph()
 	// distance, err := breadthfirst.BFSearch(graph, 2, 4)
 
 	// if err != nil {
@@ -95,7 +95,7 @@ func main() {
 
 	// fmt.Printf("Distance to given node is: %d\n", distance)
 
-	// depthfirst.DFSearch(graph, 5)
+	depthfirst.DFSearch(graph, 5)
 
 	// val := binary.Search([]int{1, 2, 3, 4, 5, 6, 7}, 6)
 

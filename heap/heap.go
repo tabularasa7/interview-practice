@@ -1,7 +1,5 @@
 package heap
 
-import "fmt"
-
 type MaxHeap struct {
 	values []int
 }
@@ -91,7 +89,6 @@ func (h *MinHeap) MinHeapify(index int) {
 	l, r := 2*index+1, 2*index+2
 	min := index
 
-	fmt.Println(h.values)
 	if l < len(h.values) && h.values[l] < h.values[min] {
 		min = l
 	}

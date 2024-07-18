@@ -15,11 +15,11 @@ func CreateGraph() map[int][]int {
 	return adjacencyList
 }
 
-func DFSearch(adjacencyList map[int][]int, val int) int {
+func DFSearch(adjacencyList map[int][]int, startingVal int) int {
 	visited := make(map[int]bool)
 	depth := 0
 
-	return search(adjacencyList, visited, val, depth)
+	return search(adjacencyList, visited, startingVal, depth)
 
 }
 
@@ -29,7 +29,7 @@ func search(adjacencyList map[int][]int, visited map[int]bool, val, depth int) i
 
 	if adjV, ok := adjacencyList[val]; ok {
 		for _, vertex := range adjV {
-			if !visited[vertex] {
+			if _, ok := visited[vertex]; !ok {
 				depth = search(adjacencyList, visited, vertex, depth)
 			}
 		}
