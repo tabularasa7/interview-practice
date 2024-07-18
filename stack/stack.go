@@ -8,7 +8,7 @@ func (s *Stack) Push(val int) {
 }
 
 func (s *Stack) Pop() int {
-	if s.isEmpty() {
+	if s.IsEmpty() {
 		return -1
 	}
 
@@ -17,6 +17,6 @@ func (s *Stack) Pop() int {
 	return val
 }
 
-func (s *Stack) isEmpty() bool {
+func (s *Stack) IsEmpty() bool {
 	return len(*s) == 0
 }
